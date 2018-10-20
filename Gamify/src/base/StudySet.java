@@ -8,7 +8,7 @@ import java.util.ArrayList;
 
 public class StudySet {
 
-	private ArrayList<Term> set;
+	public ArrayList<Term> set;
 	private BufferedReader reader;
 
 	public StudySet(String fileName) {
@@ -21,17 +21,15 @@ public class StudySet {
 
 		String[] entry = {};
 		try {
-			while (reader.readLine() != null) {
-				try {
-					entry = reader.readLine().split(":");
-					set.add(new Term(entry[0], entry[1]));
-				} catch (IOException e) {
-					e.printStackTrace();
-				}
+			for (String line = reader.readLine(); line != null && line != ""; line = reader.readLine()) {
+				entry = line.split(":");
+				set.add(new Term(entry[0], entry[1]));
+				System.out.println(line);
 			}
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
+		
 	}
 
 	public String getDefinitionAt(String term) {
