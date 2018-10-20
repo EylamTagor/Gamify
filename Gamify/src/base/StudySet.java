@@ -24,7 +24,7 @@ public class StudySet {
 		} catch (IOException e1) {
 			e1.printStackTrace();
 		}
-		while (line != null) {
+		for (int i = 0; line != null; i++) {
 			String[] entry = {};
 			try {
 				entry = r.readLine().split(":");
@@ -32,7 +32,7 @@ public class StudySet {
 				e.printStackTrace();
 			}
 
-			set.put(entry[0], entry[1]);
+			set.put(entry[i], entry[i + 1]);
 		}
 
 		return set;
