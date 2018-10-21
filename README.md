@@ -15,6 +15,9 @@ The program starts with a dashboard in which the user may:
  A version of Tetris that prompts the player to enter a term's definition in order to clear a line
 ## The Team
 [Eylam](https://github.com/EylamTagor)
+
 [Kevin](https://github.com/digitaldisarray)
+
 [Brian](https://github.com/BrianLa0616)
+
 [Ayush](https://github.com/AyushSatyavarpu)
