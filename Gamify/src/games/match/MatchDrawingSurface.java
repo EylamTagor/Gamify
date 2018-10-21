@@ -23,10 +23,22 @@ public class MatchDrawingSurface extends PApplet {
 		for (int i = 0; i < set.size(); i++) {
 			rects[i] = new Rectangle(100 + Math.random() * 600, 100 + Math.random() * 400, 100, 25);
 			rects[set.size() + i] = new Rectangle(100 + Math.random() * 600, 100 + Math.random() * 400, 100, 25);
+
 			terms[i] = set.getTermAt(i);
 			defs[i] = set.getDefinitionAt(i);
 			visible[i] = true;
 			visible[i + set.size()] = true;
+		}
+
+		for (int j = 1; j < rects.length; j++) {
+
+			if (rects[j].getX() >= rects[j - 1].getX() && rects[j].getX() >= rects[j - 1].getX() + 100
+					&& rects[j].getY() >= rects[j - 1].getY() && rects[j].getY() >= rects[j - 1].getY() + 25) {
+				rects[j].moveTo(rects[j].getX() + 75, rects[j].getY());
+				rects[j - 1].moveTo(rects[j - 1].getX() - 75, rects[j - 1].getY());
+				rects[j].moveTo(rects[j].getX(), rects[j].getY() + 50);
+				rects[j - 1].moveTo(rects[j - 1].getX(), rects[j - 1].getY() - 50);
+			}
 		}
 	}
 
