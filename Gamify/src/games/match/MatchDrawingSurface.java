@@ -12,9 +12,9 @@ public class MatchDrawingSurface extends PApplet {
 	private boolean[] visible;
 	private double time;
 
-	public MatchDrawingSurface() {
+	public MatchDrawingSurface(String fileName) {
 		time = 0;
-		set = new StudySet("C:\\Users\\eylam\\Documents\\studysettest.txt");
+		set = new StudySet(fileName);
 		rects = new Rectangle[set.size() * 2];
 		terms = new String[set.size()];
 		defs = new String[set.size()];
@@ -26,7 +26,7 @@ public class MatchDrawingSurface extends PApplet {
 			terms[i] = set.getTermAt(i);
 			defs[i] = set.getDefinitionAt(i);
 			visible[i] = true;
-			visible[i + 3] = true;
+			visible[i + set.size()] = true;
 		}
 	}
 
@@ -48,7 +48,7 @@ public class MatchDrawingSurface extends PApplet {
 						(float) (rects[x + terms.length].getY() + 15));
 			}
 		}
-		
+
 		int numVisible = 0;
 		for (int z = 0; z < visible.length; z++) {
 			if (visible[z])
@@ -57,7 +57,7 @@ public class MatchDrawingSurface extends PApplet {
 		if (numVisible > 0)
 			time++;
 		text("Time: " + ((int) (100 * time / 60)) / 100.0 + "", 225f, 75f);
-		
+
 		textSize(50);
 		text("MATCH", 25f, 75f);
 	}
@@ -74,12 +74,14 @@ public class MatchDrawingSurface extends PApplet {
 									visible[k] = false;
 									visible[j] = false;
 								} else {
-									if (rects[k].getX() > rects[j].getX()) {
-										rects[k].moveTo(rects[k].getX() + 100, rects[k].getY());
-										rects[j].moveTo(rects[j].getX() - 100, rects[j].getY());
-									} else {
-										rects[k].moveTo(rects[k].getX() - 100, rects[k].getY());
-										rects[j].moveTo(rects[j].getX() + 100, rects[j].getY());
+									if (visible[k] && visible[j]) {
+										if (rects[k].getX() > rects[j].getX()) {
+											rects[k].moveTo(rects[k].getX() + 100, rects[k].getY());
+											rects[j].moveTo(rects[j].getX() - 100, rects[j].getY());
+										} else {
+											rects[k].moveTo(rects[k].getX() - 100, rects[k].getY());
+											rects[j].moveTo(rects[j].getX() + 100, rects[j].getY());
+										}
 									}
 								}
 							}
