@@ -68,7 +68,7 @@ public class MatchDrawingSurface extends PApplet {
 		}
 		if (numVisible > 0)
 			time++;
-		text("Time: " + ((int) (100 * time / 60)) / 100.0 + "", 225f, 75f);
+		text("Time: " + ((int) (100 * time / 60)) / 100.0 + " seconds", 225f, 75f);
 
 		textSize(50);
 		text("MATCH", 25f, 75f);
