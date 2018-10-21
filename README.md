@@ -21,3 +21,5 @@ The program starts with a dashboard in which the user may:
 [Brian](https://github.com/BrianLa0616)
 
 [Ayush](https://github.com/AyushSatyavarpu)
+
+This project was made primarily for submission at HSHacks IV Oct. 20th-21st, 2018
