@@ -1,4 +1,4 @@
-package run;
+package games.match;
 
 import java.awt.Dimension;
 
@@ -7,10 +7,10 @@ import javax.swing.JFrame;
 import processing.awt.PSurfaceAWT;
 import processing.core.PApplet;
 
-public class Gamify {
+public class Match {
 
 	public static void main(String args[]) {
-		DrawingSurface drawing = new DrawingSurface();
+		MatchDrawingSurface drawing = new MatchDrawingSurface();
 		PApplet.runSketch(new String[] { "" }, drawing);
 		PSurfaceAWT surf = (PSurfaceAWT) drawing.getSurface();
 		PSurfaceAWT.SmoothCanvas canvas = (PSurfaceAWT.SmoothCanvas) surf.getNative();
