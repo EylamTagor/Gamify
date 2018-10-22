@@ -10,8 +10,10 @@ public class StudySet {
 
 	private ArrayList<Term> set;
 	private BufferedReader reader;
+	private String fileName;
 
 	public StudySet(String fileName) {
+		this.fileName = fileName;
 		set = new ArrayList<Term>();
 		try {
 			reader = new BufferedReader(new FileReader(fileName));
@@ -67,6 +69,14 @@ public class StudySet {
 
 	public int size() {
 		return set.size();
+	}
+
+	public ArrayList<Term> getSet() {
+		return set;
+	}
+
+	public String getName() {
+		return fileName;
 	}
 
 }
