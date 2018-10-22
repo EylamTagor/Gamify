@@ -13,6 +13,13 @@ The program starts with a dashboard in which the user may:
  A take on the classic video game that prompts the player to enter a term's definition when the snake collects food
  #### Tetris
  A version of Tetris that prompts the player to enter a term's definition in order to clear a line
+
+# Try it out!
+## Unzip the contents of the dist folder to get the Runnable
+This will include the necessary jar files along with some study sets to get you started
+## Create your own game!
+Gamify is completely open-source, so you are more than welcome to simply drag-and-drop your original games into the program and study the way that fits you best.
+
 ## The Team
 [Eylam](https://github.com/EylamTagor)
 
