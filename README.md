@@ -29,4 +29,4 @@ Gamify is completely open-source, so you are more than welcome to simply drag-an
 
 [Ayush](https://github.com/AyushSatyavarpu)
 
-This project was made primarily for submission at HSHacks IV Oct. 20th-21st, 2018.
+###### This project was made primarily for submission at HSHacks IV Oct. 20th-21st, 2018.
