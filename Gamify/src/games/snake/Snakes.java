@@ -11,7 +11,7 @@ public class Snakes {
 
 	public static void main(String[] args) {
 
-		String fileName = args[0];
+		String fileName = "Spanish.txt";
 		DrawingSurface drawing = new DrawingSurface(fileName);
 		PApplet.runSketch(new String[] { "" }, drawing);
 		PSurfaceAWT surf = (PSurfaceAWT) drawing.getSurface();

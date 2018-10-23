@@ -1,0 +1,8 @@
+bailar:to dance
+nadar:to swim
+comer:to eat
+beber:to drink
+correr:to run
+cantar:to sing
+hablar:to speak
+hola:hello

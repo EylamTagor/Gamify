@@ -1,7 +1,5 @@
 package games.tetris;
 
-import java.awt.Color;
-
 import processing.core.PApplet;
 
 public class TetrisGamePiece {
@@ -178,6 +176,10 @@ public class TetrisGamePiece {
 
 	public int getType() {
 		return type;
+	}
+
+	public void setFill(int x) {
+		r = g = b = x;
 	}
 
 }
